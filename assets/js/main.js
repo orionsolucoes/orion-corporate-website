@@ -254,13 +254,37 @@
       document.querySelector('textarea[name="message"]').value
     )
 
+    document.querySelector('#submit-contact-text').textContent = ''
+
+    document.querySelector('#loading-animation').className = 'active'
+
+    let loadingAnimation = lottie.loadAnimation({
+      container: document.getElementById('loading-animation'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'assets/js/data-loading.json' // the path to the animation json
+    });    
+
     fetch("https://getform.io/f/e79027e5-011a-42cb-bda3-feb9d1fbfe05",
     {
       method: "POST",
       body: formData,
     })
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
+    .then(response => {
+      showSnackbar('Email enviado com sucesso!');
+      document.querySelector('input[name="name"]').value = '';
+      document.querySelector('input[name="email"]').value = '';
+      document.querySelector('textarea[name="message"]').value = '';
+      loadingAnimation.destroy();
+      document.querySelector('#submit-contact-text').textContent = 'Enviar'
+      document.querySelector('#loading-animation').className = ''
+    })
+    .catch(error => {
+      loadingAnimation.destroy();
+      document.querySelector('#submit-contact-text').textContent = 'Enviar'
+      document.querySelector('#loading-animation').className = ''
+    })
   }
 
 })()
