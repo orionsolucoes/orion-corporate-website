@@ -577,7 +577,7 @@ section {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #b9b9fa;
+  color: #434175;
 }
 
 .why-us .box h4 {
@@ -1600,7 +1600,7 @@ section {
   position: relative;
   border-radius: 50px;
   text-align: left;
-  border: 1px solid #b9b9fa;
+  border: 1px solid #434175;
 }
 
 #footer .footer-newsletter form input[type=email] {
