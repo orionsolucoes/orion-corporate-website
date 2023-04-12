@@ -1664,3 +1664,30 @@ section {
   display: flex;
   justify-content: center;
 }
+
+.termsfeed-com---palette-light.termsfeed-com---nb {
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 15%);
+}
+
+.termsfeed-com---nb .cc-nb-main-container {
+  padding: 20px 30px !important;
+  font-family: "Open Sans", sans-serif;
+}
+
+.termsfeed-com---nb .cc-nb-buttons-container button {
+  border-radius: 20px;
+}
+
+.termsfeed-com---palette-light .cc-nb-okagree, .termsfeed-com---palette-light .cc-nb-reject {
+  color: #fff;
+  background-color: #1EC8FC !important;
+}
+
+.termsfeed-com---palette-light .cc-nb-changep {
+  background-color: #cac7c7 !important;
+  color: #111;
+}
+
+.termsfeed-com---reset p {
+  margin-bottom: 5px !important;
+}
